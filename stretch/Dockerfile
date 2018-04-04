@@ -11,6 +11,7 @@ RUN set -xe && \
             ca-certificates \
             curl \
             dirmngr \
+            git \
             gnupg \
             && \
     apt-get clean
