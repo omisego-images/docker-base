@@ -5,7 +5,14 @@ ENV LANG=C.UTF-8
 
 RUN set -xe && \
     apt-get update && \
-    apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl && \
+    apt-get install -y --no-install-recommends \
+            apt-transport-https \
+            build-essential \
+            ca-certificates \
+            curl \
+            dirmngr \
+            gnupg \
+            && \
     apt-get clean
 
 ENV S6_VERSION="1.21.4.0"
